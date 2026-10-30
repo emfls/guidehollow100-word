@@ -14,7 +14,8 @@
     "문서 템플릿"
   ],
   "url": "https://word.guidehollow.com/",
-  "launchReady": false,
+  "launchReady": true,
   "section": "워드 문서 작성",
-  "pageTitle": "워드 문서·서식 문제 해결 가이드 | GuideHollow"
+  "pageTitle": "워드 문서·서식 문제 해결 가이드 | GuideHollow",
+  "adsReady": false
 }
