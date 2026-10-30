@@ -1,0 +1,18 @@
+{
+  "title": "GuideHollow Word",
+  "slug": "word",
+  "short": "Word",
+  "hero": "Make documents easier to create and fix.",
+  "description": "Microsoft Word layout, formatting and document troubleshooting.",
+  "accent": "#2859b8",
+  "topics": [
+    "Page numbers",
+    "Formatting",
+    "Tables",
+    "Track Changes",
+    "PDF export",
+    "Templates"
+  ],
+  "url": "https://word.guidehollow.com/",
+  "launchReady": false
+}
