@@ -1,18 +1,20 @@
 {
-  "title": "GuideHollow Word",
+  "title": "GuideHollow",
   "slug": "word",
-  "short": "Word",
-  "hero": "Make documents easier to create and fix.",
-  "description": "Microsoft Word layout, formatting and document troubleshooting.",
+  "short": "워드",
+  "hero": "워드 문서가 뜻대로 편집되지 않을 때 살펴보세요.",
+  "description": "페이지 번호, 문단·표 서식, 변경 내용 추적, PDF 저장과 문서 템플릿을 단계별로 설명합니다.",
   "accent": "#2859b8",
   "topics": [
-    "Page numbers",
-    "Formatting",
-    "Tables",
-    "Track Changes",
-    "PDF export",
-    "Templates"
+    "페이지 번호·구역",
+    "문단·스타일",
+    "표·레이아웃",
+    "변경 내용 추적",
+    "PDF로 내보내기",
+    "문서 템플릿"
   ],
   "url": "https://word.guidehollow.com/",
-  "launchReady": false
+  "launchReady": false,
+  "section": "워드 문서 작성",
+  "pageTitle": "워드 문서·서식 문제 해결 가이드 | GuideHollow"
 }
