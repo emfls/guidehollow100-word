@@ -1,6 +1,6 @@
 ---
+import CoupangBanner from '../components/CoupangBanner.astro';
 import Layout from '../layouts/Layout.astro';
-import Ad from '../components/AdPlacement.astro';
 import site from '../site.json';
 import guide from '../launch-content.json';
 import {getCollection} from 'astro:content';
@@ -8,10 +8,12 @@ const posts=(await getCollection('guides',({data})=>site.launchReady&&!data.draf
 ---
 <Layout title={site.pageTitle} description={site.description}>
 <section class="hero"><div class="wrap"><p class="eyebrow">GuideHollow / {site.section}</p><h1>{site.hero}</h1><p class="lead">{site.description}</p><p class="hero-intro">{guide.intro}</p><a class="button" href="#quick-checks">증상별 해결 순서 살펴보기</a></div></section>
+<CoupangBanner placement="home"/>
+
 <section class="wrap section" aria-labelledby="topic-heading"><h2 id="topic-heading">{site.short} 문제부터 찾아보기</h2>
 <p class="muted">현재 증상과 가까운 항목을 선택하면 먼저 확인할 단계로 이동합니다.</p>
 <div class="grid">{guide.checks.map((topic,i)=><a class="topic topic-link" href={'#'+topic.id}><span>점검 {String(i+1).padStart(2,'0')}</span><h3>{topic.title}</h3><p>{topic.when}</p><span class="topic-more">점검 방법 보기 →</span></a>)}</div>
-<Ad placement="home-after-topics"/>
+
 </section>
 <section class="wrap section" id="quick-checks"><p class="eyebrow">문제 해결 시작점</p><h2>먼저 확인할 순서</h2><p class="muted">아래 내용은 일반적인 1차 점검이며, 실제 기기와 소프트웨어 버전에 따라 달라질 수 있습니다.</p>
 <div class="diagnostics">{guide.checks.map((entry,i)=><section class="diagnostic" id={entry.id} aria-labelledby={entry.id+'-title'}><p class="diagnostic-index">점검 {String(i+1).padStart(2,'0')} · {site.short}</p><h3 id={entry.id+'-title'}>{entry.title}</h3><p class="diagnostic-when">{entry.when}</p><ol>{entry.steps.map(step=><li>{step}</li>)}</ol><p class="diagnostic-caution"><strong>주의:</strong> {entry.tip}</p></section>)}</div>
